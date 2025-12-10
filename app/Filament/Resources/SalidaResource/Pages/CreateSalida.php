@@ -13,6 +13,23 @@ class CreateSalida extends CreateRecord
 {
     protected static string $resource = SalidaResource::class;
 
+    protected static ?string $title = 'Crear Salida';
+    
+    protected function getCreatedNotificationTitle(): ?string
+    {
+        return 'Salida creado exitosamente';
+    }
+    
+    protected function getCreateFormActionLabel(): string
+    {
+        return 'Crear';
+    }
+    
+    protected function getCancelFormActionLabel(): string
+    {
+        return 'Cancelar';
+    }
+
     protected function handleRecordCreation(array $data): \Illuminate\Database\Eloquent\Model
     {
         // Validar stock primero

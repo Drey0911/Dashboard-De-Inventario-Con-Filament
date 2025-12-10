@@ -23,13 +23,19 @@ class DashboardPanelProvider extends PanelProvider
     public function panel(Panel $panel): Panel
     {
         return $panel
-            ->default()
-            ->id('dashboard')
-            ->path('dashboard')
-            ->login()
-            ->colors([
-                'primary' => Color::hex('#7A2DCF'),
-            ])
+        ->default()
+        ->id('dashboard')
+        ->path('dashboard')
+        ->login()
+        ->brandName('Gestión de Inventario')
+        ->brandLogoHeight('50px') 
+        ->colors([
+            'primary' => Color::hex('#7A2DCF'),
+        ])
+            ->renderHook(
+            'panels::head.end',
+            fn() => view('filament.custom-styles')
+            )
             ->discoverResources(in: app_path('Filament/Resources'), for: 'App\\Filament\\Resources')
             ->discoverPages(in: app_path('Filament/Pages'), for: 'App\\Filament\\Pages')
             ->pages([

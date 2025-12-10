@@ -27,6 +27,7 @@ Aplicación para la gestión de inventario construida con Laravel y el panel adm
 - Registro de entradas con actualización automática de stock del producto.
 - Edición y eliminación de entradas con ajuste/reversión de stock correspondiente.
 - Gestión completa de productos, proveedores, categorías y clientes.
+- Gestión de Salidas y entradas al inventario.
 - Filtros avanzados, búsqueda y acciones en tabla.
 - Exportaciones a Excel y PDF.
 - Frontend moderno con Vite + Tailwind CSS.
@@ -45,6 +46,17 @@ Aplicación para la gestión de inventario construida con Laravel y el panel adm
 - Composer
 - Node.js 18+ (para Vite)
 - MySQL 5.7/8+
+
+## Lenguaje
+
+Dentro de las .env que crees, debes especificar el idioma para que se haga la traducción
+correcta en los modulos y dashboard de Filament
+ 
+   ```bash
+    APP_LOCALE=es
+    APP_FALLBACK_LOCALE=es
+    APP_FAKER_LOCALE=es_ES
+   ```
 
 ## Instalación
 
