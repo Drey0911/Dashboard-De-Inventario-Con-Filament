@@ -1,5 +1,5 @@
 <p align="center">
-  <strong style="font-size:36px">Gestión de Inventario con Filament</strong>
+  <strong style="font-size:80px">Gestión de Inventario con Filament</strong>
 </p>
 
 <p align="center">
